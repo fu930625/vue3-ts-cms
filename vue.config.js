@@ -9,18 +9,19 @@ function resolve(dir)  {
   return path.join(__dirname,dir)
 }
 module.exports = {
+  lintOnSave:false,
   //方式一:CLI提供的属性
   outputDir: "./build",
   devServer: {
-    proxy: {
-      '^/api': {
-        target: 'http: //152.136.185.210:4000',
-        pathRewrite: {
-          '^/api': ''
-        },
-        changeOrigin: true
-      }
-    }
+    // proxy: {
+    //   '^/api': {
+    //     target: 'http: //152.136.185.210:4000',
+    //     pathRewrite: {
+    //       '^/api': ''
+    //     },
+    //     changeOrigin: true
+    //   }
+    // }
   },
   //2: 和webpack属性完全一致,最后会进行合并
   // configureWebpack: {

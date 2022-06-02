@@ -2,12 +2,12 @@
 // module.exports = defineConfig({
 //   transpileDependencies: true,
 // });
-
 const path = require('path')
 
 function resolve(dir)  {
   return path.join(__dirname,dir)
 }
+
 module.exports = {
   lintOnSave:false,
   //方式一:CLI提供的属性
@@ -39,5 +39,5 @@ module.exports = {
     .set('@', resolve('src'))
     .set('components', resolve('@/components'))
 
-  }
+  },
 }

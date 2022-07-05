@@ -6,8 +6,12 @@ import 'element-plus/dist/index.css'
 import ElementPlus from 'element-plus'
 import './assets/css/index.less'
 import 'normalize.css'
-const app = createApp(App)
+import * as ELIcons from'@element-plus/icons-vue'
 
+const app = createApp(App)
+for(const name in ELIcons) {
+  app.component(name,(ELIcons as any)[name])
+}
 app.use(router)
 app.use(store)
 app.use(ElementPlus)
